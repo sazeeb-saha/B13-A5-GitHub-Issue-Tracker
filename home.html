@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issues Tracker</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+
+    <!-- Tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fontawesome KIT -->
+    <script
+      src="https://kit.fontawesome.com/55b8bcd38f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <!-- nav bar  -->
+      <nav
+        class="space-y-4 sm:max-w-full sm:px-14 py-5 sm:flex sm:justify-between shadow-sm"
+      >
+        <div class="flex justify-center items-center gap-1">
+          <img class="w-9" src="./assets/github-logo.png" alt="Github Logo" />
+          <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+        </div>
+        <div class="flex justify-center items-center gap-3">
+          <div class="relative">
+            <i
+              class="fa-solid fa-magnifying-glass absolute top-3 left-3 opacity-50"
+            ></i>
+            <input
+              class="px-9 py-2 border-gray-200 shadow-sm"
+              type="search"
+              placeholder="Search Issues..."
+            />
+          </div>
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i> New Issues
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- tab section  -->
+
+    <section class="w-8/12 mx-auto mt-9 px-2 py-6 rounded-md shadow-md">
+      <div class="space-x-2">
+        <div
+          onclick="toggleButtonStyle('all-btn')"
+          id="all-btn"
+          class="btn btn-primary"
+        >
+          <h2 class="px-2">All</h2>
+        </div>
+        <div
+          onclick="toggleButtonStyle('interview-btn')"
+          id="interview-btn"
+          class="btn"
+        >
+          <h2>Open</h2>
+        </div>
+        <div
+          onclick="toggleButtonStyle('rejected-btn')"
+          id="rejected-btn"
+          class="btn"
+        >
+          <h2>Closed</h2>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
