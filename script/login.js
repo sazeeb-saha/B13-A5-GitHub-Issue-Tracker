@@ -7,7 +7,9 @@ const logIn = document
     if (inputUserName.value == "admin" && inputPassword.value == "admin123") {
       window.location.assign("./home.html");
     } else {
-      alert("Invalid Username or Password");
+      alert(" Login Failed!! Invalid Username or Password");
+      inputUserName.value = "";
+      inputPassword.value = "";
       return;
     }
   });
