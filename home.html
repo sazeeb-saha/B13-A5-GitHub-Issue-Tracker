@@ -53,30 +53,89 @@
 
     <!-- tab section  -->
 
-    <section class="w-8/12 mx-auto mt-9 px-2 py-6 rounded-md shadow-md">
+    <section class="w-8/12 mx-auto mt-9 px-4 py-6 rounded-md shadow-md">
       <div class="space-x-2">
-        <div
-          onclick="toggleButtonStyle('all-btn')"
-          id="all-btn"
-          class="btn btn-primary"
-        >
+        <div onclick="switchTab('all')" id="tab-all" class="btn btn-primary">
           <h2 class="px-2">All</h2>
         </div>
-        <div
-          onclick="toggleButtonStyle('interview-btn')"
-          id="interview-btn"
-          class="btn"
-        >
+        <div onclick="switchTab('open')" id="tab-open" class="btn btn-active">
           <h2>Open</h2>
         </div>
         <div
-          onclick="toggleButtonStyle('rejected-btn')"
-          id="rejected-btn"
-          class="btn"
+          onclick="switchTab('closed')"
+          id="tab-closed"
+          class="btn btn-active"
         >
           <h2>Closed</h2>
         </div>
       </div>
     </section>
+
+    <!-- issues header  -->
+
+    <section
+      class="w-8/12 mx-auto mt-9 px-4 py-6 rounded-md shadow-md flex justify-between items-center"
+    >
+      <!-- left part -->
+
+      <div class="flex justify-between items-center gap-2">
+        <img src="./assets/Aperture.png" alt="Aperture image " />
+        <div>
+          <h2 class="text-xl font-semibold">
+            <span id="issues-count">50</span> Issues
+          </h2>
+          <p class="text-[#64748B]">Track and manage your project issues</p>
+        </div>
+      </div>
+
+      <!-- right part -->
+
+      <div class="flex justify-between items-center gap-3">
+        <div class="flex justify-between items-center gap-3">
+          <div class="w-3 h-3 bg-green-800 rounded-full"></div>
+          <p>Open</p>
+        </div>
+        <div class="flex justify-between items-center gap-3">
+          <div class="w-3 h-3 bg-purple-800 rounded-full"></div>
+          <p>Closed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- data section -->
+    <!-- issues dynamically added hare from js  -->
+    <section
+      id="issues-container"
+      class="w-8/12 mx-auto p-6 grid grid-cols-4 gap-4 bg-white rounded-t-none rounded-lg border-[#FBFBFB] shadow-xl"
+    >
+      <div class="bg-[#fbfbfb] p-4 border border-gray-200 shadow-lg">
+        <!-- part-1 -->
+        <div class="flex justify-between">
+          <img src="./assets/Open-Status.png" alt="" />
+          <!-- <img src="./assets/Closed- Status .png" alt="" /> -->
+          <div class="">High</div>
+        </div>
+        <!-- part-2 -->
+        <div>
+          <h2>Fix navigation menu on mobile devices</h2>
+          <p>
+            The navigation menu doesn't collapse properly on mobile devices...
+          </p>
+        </div>
+        <!-- part-3 -->
+        <div class="flex items-center">
+          <p><i class="fa-solid fa-bug"></i>BUG</p>
+          <p><i class="fa-solid fa-life-ring"></i>HELP WANTED</p>
+        </div>
+        <!-- part-4 -->
+        <div class="border-gray-300 border-t">
+          <p>author name</p>
+          <p>date</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- js link  -->
+    <script src="./script/home.js"></script>
   </body>
 </html>
