@@ -33,7 +33,9 @@
           <img class="w-9" src="./assets/github-logo.png" alt="Github Logo" />
           <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
         </div>
-        <div class="flex justify-center items-center gap-3">
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-3"
+        >
           <div class="relative">
             <i
               class="fa-solid fa-magnifying-glass absolute top-3 left-3 opacity-50"
@@ -53,7 +55,7 @@
 
     <!-- tab section  -->
 
-    <section class="w-8/12 mx-auto mt-9 px-4 py-6 rounded-md shadow-md">
+    <section class="w-10/12 mx-auto mt-9 px-4 py-6 rounded-md shadow-md">
       <div class="space-x-2">
         <div onclick="switchTab('all')" id="tab-all" class="btn btn-primary">
           <h2 class="px-2">All</h2>
@@ -74,7 +76,7 @@
     <!-- issues header  -->
 
     <section
-      class="w-8/12 mx-auto mt-9 px-4 py-6 rounded-md shadow-md flex justify-between items-center"
+      class="w-10/12 mx-auto mt-9 px-4 py-6 rounded-md shadow-md flex flex-col sm:flex-row justify-between items-center"
     >
       <!-- left part -->
 
@@ -106,36 +108,11 @@
     <!-- issues dynamically added hare from js  -->
     <section
       id="issues-container"
-      class="w-8/12 mx-auto p-6 grid grid-cols-4 gap-4 bg-white rounded-t-none rounded-lg border-[#FBFBFB] shadow-xl"
-    >
-      <div class="bg-[#fbfbfb] p-4 border border-gray-200 shadow-lg">
-        <!-- part-1 -->
-        <div class="flex justify-between">
-          <img src="./assets/Open-Status.png" alt="" />
-          <!-- <img src="./assets/Closed- Status .png" alt="" /> -->
-          <div class="">High</div>
-        </div>
-        <!-- part-2 -->
-        <div>
-          <h2>Fix navigation menu on mobile devices</h2>
-          <p>
-            The navigation menu doesn't collapse properly on mobile devices...
-          </p>
-        </div>
-        <!-- part-3 -->
-        <div class="flex items-center">
-          <p><i class="fa-solid fa-bug"></i>BUG</p>
-          <p><i class="fa-solid fa-life-ring"></i>HELP WANTED</p>
-        </div>
-        <!-- part-4 -->
-        <div class="border-gray-300 border-t">
-          <p>author name</p>
-          <p>date</p>
-        </div>
-      </div>
-    </section>
+      class="w-10/12 mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 bg-white rounded-t-none rounded-lg border-[#FBFBFB] shadow-xl"
+    ></section>
 
     <!-- js link  -->
     <script src="./script/home.js"></script>
   </body>
 </html>
+<p class="text-purple-600"></p>
