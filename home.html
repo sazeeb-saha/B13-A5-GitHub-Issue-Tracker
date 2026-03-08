@@ -41,6 +41,7 @@
               class="fa-solid fa-magnifying-glass absolute top-3 left-3 opacity-50"
             ></i>
             <input
+              id="input-search"
               class="px-9 py-2 border-gray-200 shadow-sm"
               type="search"
               placeholder="Search Issues..."
@@ -84,7 +85,7 @@
         <img src="./assets/Aperture.png" alt="Aperture image " />
         <div>
           <h2 class="text-xl font-semibold">
-            <span id="issues-count">50</span> Issues
+            <span id="issues-count">0</span> Issues
           </h2>
           <p class="text-[#64748B]">Track and manage your project issues</p>
         </div>
@@ -110,6 +111,12 @@
       id="issues-container"
       class="w-10/12 mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 bg-white rounded-t-none rounded-lg border-[#FBFBFB] shadow-xl"
     ></section>
+
+    <!-- modal  -->
+    <dialog
+      id="modal-container"
+      class="modal modal-bottom sm:modal-middle space-y-2"
+    ></dialog>
 
     <!-- js link  -->
     <script src="./script/home.js"></script>
