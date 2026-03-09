@@ -21,7 +21,9 @@
 3. What is the difference between map(), filter(), and forEach()?<br>
    Answer: <br>
 
-- `map()` – Transforms each element and returns a new array. -`filter()` – Returns a new array with elements that pass a condition. -`forEach()` – Executes a function on each element but does not return a new array.
+- `map()` – Transforms each element and returns a new array.
+- `filter()` – Returns a new array with elements that pass a condition.
+- `forEach()` – Executes a function on each element but does not return a new array.
 
 4. What is an arrow function?<br>
    Answer:<br>
