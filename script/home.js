@@ -53,7 +53,7 @@ async function loadIssues() {
   }
   displayIssues(issues);
 }
-loadIssues();
+
 function displayIssues(issues) {
   //   console.log(issues);
   const issueContainer = document.getElementById("issues-container");
@@ -232,3 +232,33 @@ function modal(issue) {
   myModal.appendChild(div);
   myModal.showModal();
 }
+
+document.getElementById("btn-search").addEventListener("click", function () {
+  const search = document.getElementById("input-search");
+  const searchValue = search.value.trim();
+
+  if (searchValue === "") {
+    loadIssues();
+    return;
+  }
+
+  showSpinner();
+
+  fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`,
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      let issues = data.data;
+
+      if (currentTab !== "all") {
+        issues = issues.filter((issue) => issue.status === currentTab);
+      }
+
+      displayIssues(issues);
+    })
+    .catch(() => hideSpinner());
+
+  search.value = "";
+});
+loadIssues();
