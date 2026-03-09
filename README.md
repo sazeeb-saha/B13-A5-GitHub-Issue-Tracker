@@ -29,4 +29,4 @@
 
 5. What are template literals?<br>
    Answer: <br>
-   Template literals are strings using backticks (` `) that allow embedded expressions (${…}) and multi-line strings.
+   Template literals are strings using backticks that allow embedded expressions (${…}) and multi-line strings.
