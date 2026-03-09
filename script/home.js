@@ -2,6 +2,24 @@ let currentTab = "all";
 const tabActive = ["btn-primary"];
 const tabInactive = ["btn-active"];
 
+// function for show spinner section
+
+function showSpinner() {
+  document.getElementById("issues-header").classList.add("hidden");
+  document.getElementById("issues-container").classList.add("hidden");
+
+  document.getElementById("spinner").classList.remove("hidden");
+}
+
+// function for hide spinner section
+
+function hideSpinner() {
+  document.getElementById("issues-header").classList.remove("hidden");
+  document.getElementById("issues-container").classList.remove("hidden");
+
+  document.getElementById("spinner").classList.add("hidden");
+}
+
 function switchTab(tab) {
   currentTab = tab;
   const tabs = ["all", "open", "closed"];
@@ -21,6 +39,7 @@ function switchTab(tab) {
 }
 
 async function loadIssues() {
+  showSpinner();
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
   );
