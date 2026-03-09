@@ -21,6 +21,7 @@ function hideSpinner() {
 }
 
 function switchTab(tab) {
+  showSpinner();
   currentTab = tab;
   const tabs = ["all", "open", "closed"];
 
@@ -137,6 +138,8 @@ function displayIssues(issues) {
   // console.log(totalIssue);
   let issueCount = document.getElementById("issues-count");
   issueCount.innerText = totalIssue;
+
+  hideSpinner();
 }
 
 function modal(issue) {
